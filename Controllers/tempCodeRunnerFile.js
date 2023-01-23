@@ -1,0 +1,1 @@
+exports.deleteUser=factory.deleteOne(User);

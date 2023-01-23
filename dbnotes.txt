@@ -1,0 +1,40 @@
+use command is used for creating of switching db
+
+
+show collections to  show column
+db.tours.find() to show document
+
+//////////CRUDE  //////
+
+//QUERY//
+db.tours.find({difficulty:"easy"})
+
+//TO SEARCH WHICH HAS A PRICE LESS THAN 500
+
+db.tours.find({price:{$lte:500} })
+
+
+//TO SEARCH WHICH HAS A PRICE LESS THAN 500 AND RATING GREATER THAN 4.0
+
+db.tours.find({price:{$lts:500},rating:{$gte:4.0}})
+
+
+ //OR operator
+
+db.tours.find({$or:[{price:{$gt:500}},{rating:{$gte:4.8}}   ]})
+
+
+//Projection 
+db.tours.find({$or:[{price:{$gt:500}},{rating:{$gte:4.8}}, {name:1}   ]})
+
+
+
+/////////////////UPDATE/////////
+
+db.tours.updateOne({name:"the snow adventure"},{$set:{price:397} })
+ 
+
+
+ //DELETE///
+db.tours.deleteMany({rating:{$lt:4.8} })
+
