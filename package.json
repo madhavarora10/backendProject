@@ -14,9 +14,7 @@
 
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
 
-    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    
-    "build": "CI= npm run build"
+    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
 
   },
 
