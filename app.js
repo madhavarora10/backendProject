@@ -16,7 +16,8 @@ const hpp=require('hpp');
 const cookieParser=require('cookie-parser');
 const viewRouter=require('./routes/viewRoutes');
 
-const serverless=require('serverless-http');
+const compression=require('compression');  
+
 
 // express is a function upon which calling will add bunch of methods on app
 const app= express();
@@ -87,6 +88,7 @@ app.use(hpp({
     ]
 })
 );
+app.use(compression());
 
 // .listen creates a server which listens the requests of the client
 // takes two arguments port and a call back function
@@ -125,4 +127,3 @@ app.use(globalErrorHandler);
 
 module.exports=app;
 
-module.exports.handler=serverless(app);

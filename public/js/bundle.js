@@ -8387,7 +8387,7 @@ var login = /*#__PURE__*/function () {
             _context.next = 4;
             return (0, _axios.default)({
               method: 'POST',
-              url: 'http://127.0.0.1:3000/api/v1/users/login',
+              url: '/api/v1/users/login',
               data: {
                 email: email,
                 password: password
@@ -8438,7 +8438,7 @@ var logout = /*#__PURE__*/function () {
             _context2.next = 3;
             return (0, _axios.default)({
               method: 'GET',
-              url: 'http://127.0.0.1:3000/api/v1/users/logout'
+              url: '/api/v1/users/logout'
             });
 
           case 3:
@@ -8498,7 +8498,7 @@ var updateSettings = /*#__PURE__*/function () {
         switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            url = type === 'password' ? 'http://127.0.0.1:3000/api/v1/users/updateMyPassword' : 'http://127.0.0.1:3000/api/v1/users/updateMe';
+            url = type === 'password' ? '/api/v1/users/updateMyPassword' : '/api/v1/users/updateMe';
             _context.next = 4;
             return (0, _axios.default)({
               method: 'PATCH',
@@ -8914,7 +8914,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63228" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56330" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
